@@ -6,7 +6,9 @@ int BinarySearch(int arr [], int n, int key)
     int start = 0;
     int end = n - 1;
 
+    // IN this formula of mid there is a mynute mistake instead of this use (int mid  = start + (end - start) / 2 )
     int mid = ( start + end ) / 2;
+
 
     while( start <= end )
     {
@@ -22,7 +24,7 @@ int BinarySearch(int arr [], int n, int key)
         {
             end = mid - 1;
         }
-        mid = ( start + end ) / 2;
+        mid = ( start + end ) / 2;   // mynute mistake instead of this use (int mid  = start + (end - start) / 2 )
 
     }
     return -1;
