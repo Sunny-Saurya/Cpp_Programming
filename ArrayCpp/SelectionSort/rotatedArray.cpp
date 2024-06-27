@@ -5,12 +5,12 @@ using namespace std;
 
 int rotatedArray(int arr[], int n, int k)
 {
-    for(int i = k + 1; i < n; i++)
+    for(int i = k ; i < n; i++)
     {
         cout << arr[i] << " ";
     }
 
-    for(int i = 0; i <= k; i++)
+    for(int i = 0; i < k; i++)
     {
         cout << arr[i] << " ";
     }

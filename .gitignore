@@ -14,15 +14,19 @@ prime_number.exe
 pattern_1.exe
 pattern_2.exe
 pattern_3.exe
+PainterPartitionProblem.exe
 vowel_consonent.exe
 alpha_or_not.exe
 len_of_string.exe
 toggle_char.exe
 count_vowel.exe
 remove_vowel.exe
+rotatedArray.exe
+searchInRotatedArray.exe
 factorial.exe
 primeOfNumber.exe
 palindrome_number.exe
+searchingSortedArray.exe
 armstrong_number.exe
 bitwize_operator.exe
 fibonacci_series.exe
@@ -45,3 +49,4 @@ SecMax_number.exe
 LinearSearch.exe
 Insertion_sort.exe
 SumOfEle_Array.exe
+AggressiveCows.exe
