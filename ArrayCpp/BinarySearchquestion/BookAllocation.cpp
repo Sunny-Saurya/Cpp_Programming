@@ -10,7 +10,7 @@ int isPossible(int arr[], int n, int m, int mid)
 
     for(int i = 0; i < n; i++)
     {
-        if(pageSum + arr[i] <=mid)
+        if(pageSum + arr[i] <= mid)
         {
             pageSum = pageSum + arr[i];
         }
