@@ -65,6 +65,8 @@ void merge(int *arr, int s , int e)
 
 void mergeSort(int *arr, int s, int e)
 {
+    // base condition
+    
     if(s >= e)
     {
         return;
