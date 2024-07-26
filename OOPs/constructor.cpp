@@ -20,13 +20,16 @@ class Hero{
 
     // constructor with parameter 
 
-    Hero(int health){
+    Hero(int health, char level){
         cout << "this -> " << this << endl;
         this -> health = health;
+        cout << "this -> " << this << endl;
+        this -> level = level;
     }
 
     void print(){
-         cout << "Level is : " << level << endl;
+         cout << "Health is : " << this->health << endl;
+         cout << "Level is : " << this->level << endl;
     }
 
 
@@ -53,20 +56,44 @@ class Hero{
 
 int main()
 {
+    Hero h2(100, 'C');
+    h2.print();
+
+    // copy contructor
+
+    Hero h3(h2);
+    h3.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // static allocation
-    Hero h1(122);  // call contructor
-    cout << "Address of h1 " << &h1 << endl;
-    h1.setHealth(10);
-    h1.setLevel('A');
+    // Hero h1(122);  // call contructor
+    // cout << "Address of h1 " << &h1 << endl;
+    // h1.setHealth(10);
+    // h1.setLevel('A');
 
-    cout << "level is : " << h1.getLevel() << endl;
-    cout << "health is : " << h1.getHealth() << endl;
-    // dynamic allocation
+    // cout << "level is : " << h1.getLevel() << endl;
+    // cout << "health is : " << h1.getHealth() << endl;
+    // // dynamic allocation
 
-    Hero *b = new Hero; // call contructor
-    b->setHealth(80);
-    b->setLevel('A');
+    // Hero *b = new Hero; // call contructor
+    // b->setHealth(80);
+    // b->setLevel('A');
 
-    cout << "level is : " << b->getLevel() << endl;
-    cout << "health is : " << b->getHealth() << endl;
+    // cout << "level is : " << b->getLevel() << endl;
+    // cout << "health is : " << b->getHealth() << endl;
 }
