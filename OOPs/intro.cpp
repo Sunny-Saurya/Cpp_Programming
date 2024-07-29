@@ -3,14 +3,32 @@ using namespace std;
 
 class Hero{
 
-    int health;
+    // properties
+    public:
+    int health; 
+    char level;
+
+    void print(){
+        cout << "Level: " << level << endl;
+    }
 };
 
 int main()
 {
     // object
 
-    Hero h1;
+    Hero ramesh;
 
-    cout << "Size of h1 : " << sizeof(h1);
+    ramesh.health = 100;
+    ramesh.level = 'A';
+
+
+    cout << "Health of ramesh is  : " <<ramesh.health<< endl; 
+
+    cout << "Level of ramesh is  : " <<ramesh.level<< " "; 
+
+    
+
+
+    // cout << "Size of h1 : " << sizeof(ramesh);
 }
