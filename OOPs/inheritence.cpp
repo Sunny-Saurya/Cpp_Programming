@@ -3,7 +3,7 @@ using namespace std;
 
 class Human {
 
-    public:
+    protected:
 
     float height;
     int weight;
@@ -27,7 +27,8 @@ class Human {
 
 //inheritence
 
-class Male: public Human {
+// you can access the parent to child with three method : protected, public, and private
+class Male: private Human {
     public:
     string color;
 
@@ -35,11 +36,19 @@ class Male: public Human {
     {
         cout << " Male Sleeping " << endl;
     }
+
+    int getHeight(){
+        return this->height;
+    }
 };
 
 int main()
 {
 
+    Male m1;
+    // cout << m1.getHeight()<< endl;
+    cout << m1.height << endl;
+/*
     Male object1;
     cout << object1.age << endl;
     cout << object1.weight << endl;
@@ -53,6 +62,6 @@ int main()
     cout <<"Height is : "<<  object1.height<< endl;
     object1.sleep();
 
-
+*/
     return 0;
 }
