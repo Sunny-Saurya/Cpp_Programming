@@ -149,9 +149,10 @@ int main()
     print(head);
 
     cout << "The LL after deletion : "<< endl;
-    deleteNode(head, 1);
+    deleteNode(head, 1); // tail at 22
+    deleteNode(head, 4); // tail is garbage value;
     print(head);
 
-    // cout << "head : " << head-> data << endl;
-    // cout << "tail : " << tail -> data << endl;
+    cout << "head : " << head-> data << endl;
+    cout << "tail : " << tail -> data << endl;
 }
