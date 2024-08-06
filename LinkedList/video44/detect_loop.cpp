@@ -1,0 +1,117 @@
+#include <iostream>
+#include<map>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    // Constructor
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+void  InsertAtTail(Node* &tail, int d)
+{
+    Node* temp = new Node(d);
+    tail -> next = temp;
+    tail = tail -> next;
+}
+
+void InsertAtHead(Node* &head, int d)
+{
+    Node* temp = new Node(d);
+    temp -> next = head;
+    head = temp;
+};
+
+void print(Node *head){
+    Node* temp = head;
+
+    while(temp != NULL)
+    {
+        cout << temp -> data << " ";
+        temp = temp -> next;
+
+    }
+    cout << endl;
+}
+
+void InsertAtPosition(Node* &tail ,Node* &head,int position, int d)
+{
+    // insert at start
+    if(position == 1)
+    {
+        InsertAtHead(head,d);
+        return;
+    };
+    
+
+    Node* temp = head;
+    int count  = 1;
+
+    while(count < position-1)
+    {
+        temp = temp -> next;
+        count++;
+    }
+
+    //inserting at last Position
+    if(temp -> next == NULL)
+    {
+        InsertAtTail(tail, d);
+        return;
+    }
+
+    // creating a node for d
+
+    Node* nodeToInsert = new Node(d);
+    nodeToInsert -> next = temp -> next;
+    temp -> next = nodeToInsert;
+}
+
+bool detectLoop(Node* head)
+{
+    if(head == NULL) return false;
+
+    map<Node*,bool> visited;
+
+    Node* temp  = head;
+
+    while(temp != NULL)
+    {
+        // cycle is present
+        if(visited[temp] == true)
+        {
+        cout << "Cycle starts from : " << temp -> data << endl;
+            return true;
+        }
+        visited[temp] = true;
+        temp = temp->next;
+
+    }
+    return false;
+}
+
+int main() {
+    // Creating the linked list: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+    Node* node1 = new Node(10);
+    Node* head =  node1;
+    Node* tail = node1;
+
+    InsertAtPosition(tail, head, 2, 12);
+    InsertAtPosition(tail, head, 3, 14);
+    InsertAtPosition(tail, head, 4, 16);
+    InsertAtPosition(tail, head, 5, 18);
+
+    tail -> next = head -> next;
+    // print(head);
+
+    if(detectLoop(head)) cout << "Cycle is present";
+    else cout << "Cycle is not present";
+
+    return 0;
+}
