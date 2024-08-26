@@ -25,22 +25,22 @@ void insertAtTail(Node *&tail, int d)
 
 // I approach --->>>>
 
-// Node *getMiddle(Node *head)
-// {
+Node *getMiddle(Node *head)
+{
 
-//     if (head == NULL)
-//         return head;
-//     Node *slow = head;
-//     Node *fast = head -> next;
+    if (head == NULL)
+        return head;
+    Node *slow = head;
+    Node *fast = head -> next;
 
-//     while (fast != NULL && fast->next != NULL)
-//     {
-//         slow = slow->next;
-//         fast = fast->next -> next;
-//     }
+    while (fast != NULL && fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next -> next;
+    }
 
-//     return slow;
-// }
+    return slow;
+}
 
 
 void print(Node *head)
@@ -71,7 +71,7 @@ int main()
     cout << "Linked list : " << " ";
     print(head);
     
-    Node *mid = getMiddle(head, tail);
+    Node *mid = getMiddle(head);
     if (mid)
     {
         cout << "Mid of Linked List : " << mid->data << endl;
