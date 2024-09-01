@@ -47,7 +47,7 @@ Node* removeDuplicates(Node* &head)
             else{
                 prev = temp;
                 temp = temp -> next;
-            }
+            }z
         }
         curr = curr -> next;
     }   
