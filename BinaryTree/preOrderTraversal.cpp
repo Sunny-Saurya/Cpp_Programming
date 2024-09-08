@@ -85,17 +85,17 @@ void  inorder(Node* root){
     inorder(root->right);
 }
 
-void preOrder(Node* root){
-    // base case
-
-    if(root == NULL){
-        return;
+void preOrder(Node* root) {
+    //base case
+    if(root == NULL) {
+        return ;
     }
-    cout << root->data << " ";
+
+    cout << root-> data << " ";
     preOrder(root->left);
     preOrder(root->right);
-}
 
+}
 
 int main()
 {
