@@ -2,65 +2,94 @@
 #include<queue>
 using namespace std;
 
-class Node{
+class Node {
     public:
     int data;
     Node* left;
     Node* right;
 
-    // constructor
-
-    Node(int data)
-    {
-        this -> data = data;
-        this -> left = NULL;
-        this -> right = NULL;
+    // Constructor
+    Node(int data) {
+        this->data = data;
+        this->left = NULL;
+        this->right = NULL;
     }
 };
 
-Node* buildTree(Node* root)
-{
-    cout << "Enter the data : " << endl;
+// Creating tree
+Node* buildTree(Node* &root) { // Pass root by reference
+    cout << "Enter data: " << endl;
     int data;
     cin >> data;
 
+    if(data == -1) return NULL; // Handle -1 case first
+    
     root = new Node(data);
+    
+    cout << "Enter left node of " << data << endl;
+    root->left = buildTree(root->left);
+    cout << "Enter right node of " << data << endl;
+    root->right = buildTree(root->right);
 
-    if(data == -1) return NULL;
-
-    cout << "Enter data for inserting in left of " << data << endl;
-    root -> left = buildTree(root -> left);
-    cout << "Enter data for inserting in right of " << data << endl;
-    root -> right = buildTree(root -> right);
     return root;
 }
 
-void inorderTraversal(Node* root, int &count)
-{
-    if(root == NULL) return;
-
-    inorderTraversal(root -> left, count);
-    // leaf node
-
-    if(root -> left == NULL && root -> right == NULL)
-    {
-        count++;
+// Printing tree level-order (BFS)
+void buildFromLevelOrder(Node* root) {
+    if (root == NULL) {
+        return;
     }
+    
+    queue<Node*> q;
+    q.push(root);
+    q.push(NULL);
 
-    inorderTraversal(root -> right, count);
+    while (!q.empty()) {
+        Node* temp = q.front();
+        q.pop();
+        
+        if (temp == NULL) {
+            cout << endl;
+            if (!q.empty()) {
+                q.push(NULL);
+            }
+        }
+        else {
+            cout << temp->data << " ";  // Print the data
+
+            if (temp->left) {
+                q.push(temp->left);
+            }
+            if (temp->right) {
+                q.push(temp->right);
+            }
+        }
+    }
 }
 
-int noOfLeafNode(Node* root)
+int inorder(Node* root, int &count)
+{
+    if(root == NULL) return 0;
+
+    inorder(root ->  left, count);
+    count++;
+    inorder(root -> right, count);
+    return count;
+}
+
+
+int countNode(Node* root)
 {
     int count = 0;
-    inorderTraversal(root, count);
-    cout << count << " Leaf present in the tree";
+    inorder(root, count);
+    return count;
 }
 
-
-
-int main()
-{
+int main() {
     Node* root = NULL;
-    buildTree(root);
+    buildTree(root);  // Call by reference
+    // Example input: 1 3 5 -1 -1 7 -1 -1 2 6 -1 -1 8 -1 -1
+    buildFromLevelOrder(root);  // Level-order traversal
+    cout<< "Number of Node present in BT : " << countNode(root)<<endl;
+    return 0;
 }
