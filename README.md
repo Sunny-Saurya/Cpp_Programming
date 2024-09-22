@@ -11,17 +11,6 @@ Solutions to common problems related to that topic.
 Detailed explanations and comments in the code to make it more understandable.
 css
 
-Copy code
-
-├── Arrays
-│   └── [ProblemName].cpp
-├── LinkedList
-│   └── [ProblemName].cpp
-├── Trees
-│   └── [ProblemName].cpp
-├── Sorting
-│   └── [AlgorithmName].cpp
-└── ...
 
 🚀 Getting Started
 To run any of the programs:
@@ -31,7 +20,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/YourUsername/your-dsa-repo.git
+git clone https://github.com/Sunny-Saurya/Cpp_Programming
 Navigate to the problem or algorithm folder.
 Compile and run the code:
 bash
