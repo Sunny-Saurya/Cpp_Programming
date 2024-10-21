@@ -88,8 +88,7 @@ int main()
 
     takeInput(root);
     cout << "Printing the BST: " << endl;
-    
-    levelOrderTraversal(root);
 
+    levelOrderTraversal(root);
     return 0;
 }

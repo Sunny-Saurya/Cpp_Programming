@@ -128,6 +128,7 @@ Node* deleteFromBST(Node* root, int val) {
             root->right = deleteFromBST(root->right, mini);
             return root;
         }
+        
     } else if (root->data > val) {
         // going to the left part
         root->left = deleteFromBST(root->left, val);
@@ -159,3 +160,4 @@ int main() {
 
     return 0;
 }
+
