@@ -3,7 +3,7 @@ using namespace std;
 
 void buildHeap(vector<int> &arr, int n)
 {
-    make_heap(arr.begin(), arr.end(), greater<int>());
+    make_heap(arr.begin(), arr.end(),greater<int>());
 
 }
 
@@ -25,4 +25,6 @@ int main()
     {
         cout << arr[i] << " ";
     }
+    cout << endl;
+   
 }
