@@ -44,7 +44,7 @@ int postfixExp(string str)
 int main()
 {
     string str;
-    cout << "Enter your string here : " ;
+    cout << "Enter your string here (without space) : " ;
     cin >> str;
   
   cout << "Postfix expression evaluation : " << postfixExp(str) << endl;
