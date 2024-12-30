@@ -2,14 +2,63 @@ C++ DSA Practice Repository
 
 Welcome to my C++ Data Structures and Algorithms (DSA) repository! This is where I track my progress, upload solutions to coding problems, and document the concepts I am learning while preparing for competitive programming and technical interviews.
 
+This repository is a collection of C++ programs and solutions, showcasing various concepts, data structures, and algorithms. It is designed for learning, practicing, and exploring C++ programming.
 
-🗂️ Repository Structure
-The repository is organized into various folders, each dedicated to a particular data structure or algorithmic concept. Inside each folder, you will find:
+## Overview
 
+The repository includes a wide range of topics in C++, such as:
 
-Solutions to common problems related to that topic.
-Detailed explanations and comments in the code to make it more understandable.
-css
+- Data Structures (e.g., LinkedList, Stack, Queue)
+- Algorithms (e.g., Sorting, Graphs, Recursion)
+- Core C++ Concepts (e.g., Pointers, OOP)
+- LeetCode and Competitive Programming Questions
+- Advanced Topics (e.g., Trie, Heap)
+
+Each program is organized into folders based on its topic for easy navigation.
+
+---
+
+## Folder Structure
+
+Cpp_Programming/
+├── 2d_array/              # Operations on 2D arrays
+
+├── ArrayCpp/              # Array-based programs
+
+├── BST/                   # Binary Search Tree operations
+
+├── BinaryTree/            # General Binary Tree programs
+
+├── FunctionCpp/           # Function-based programs
+
+├── Graph/                 # Graph algorithms (DFS, Cycle detection)
+
+├── Hashmaps/              # Hashmap operations
+
+├── Heap/                  # Heap operations (Sorting using STL)
+
+├── LeetCode_Question/     # Solutions to LeetCode problems
+
+├── LinkedList/            # Linked list implementations
+
+├── OOPs/                  # Object-Oriented Programming examples
+
+├── Queue/                 # Queue-related programs
+
+├── Recursion/             # Recursive algorithms
+
+├── Stack/                 # Stack operations
+
+├── Trie/                  # Trie-based programs
+
+├── basic/                 # Basics of C++ programming
+
+├── pointers/              # Pointer-based programs
+
+├── strings/               # String operations
+
+└── video28/               # Miscellaneous examples
+
 
 
 🚀 Getting Started
