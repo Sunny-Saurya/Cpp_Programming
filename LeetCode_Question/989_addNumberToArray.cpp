@@ -18,7 +18,7 @@ public:
         while(ans > 0)
         {
             result.push_back(ans % 10);
-            ans = ans / 10;
+            ans = ans / 10;17
         }
         reverse(result.begin(), result.end());
         return result;
