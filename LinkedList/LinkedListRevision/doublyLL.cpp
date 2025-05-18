@@ -14,7 +14,14 @@ class Node{
     }
 };
 
-void insertAtHead(Node* &head, int data){
+void insertAtHead(Node* &head,Node* &tail, int data){
+
+    if(head == NULL){
+        Node* newNode = new Node(data);
+        head = newNode;
+        tail = newNode;
+    }
+
     Node* temp = head;
     Node* newNode = new Node(data);
 
@@ -24,7 +31,13 @@ void insertAtHead(Node* &head, int data){
 
 }
 
-void insertAtTail(Node* &tail, int data){
+void insertAtTail(Node* &head, Node* &tail, int data){
+
+    if(tail == NULL){
+        Node* newNode = new Node(data);
+        head = newNode;
+        tail = newNode;
+    }
     Node* temp = tail;
     Node* newNode = new Node(data);
 
@@ -40,7 +53,7 @@ void insertAtMiddle(Node* &head, Node* &tail, int pos, int data){
     Node* store = NULL;
 
     if(pos == 1){
-        insertAtHead(head, data);
+        insertAtHead(head,tail, data);
         return;
     }
 
@@ -52,7 +65,7 @@ void insertAtMiddle(Node* &head, Node* &tail, int pos, int data){
     }
 
     if(temp -> next == NULL){
-        insertAtTail(tail, data);
+        insertAtTail(head, tail, data);
         return;
     }
 
@@ -87,14 +100,18 @@ void printList(Node* head){
 }
 int main(){
 
-    Node* newNode = new Node(10);
-    Node* head = newNode;
-    Node* tail = newNode;
+    // Node* newNode = new Node(10);
+    // Node* head = newNode;
+    // Node* tail = newNode;
 
-    insertAtHead(head, 12);
-    insertAtHead(head, 14);
-    insertAtTail(tail, 12);
-    insertAtTail(tail, 14);
+    // if starting node is null
+    Node* head = NULL;
+    Node* tail = NULL;
+
+    insertAtHead(head,tail,12);
+    insertAtHead(head,tail, 14);
+    insertAtTail(head,tail, 12);
+    insertAtTail(head,tail, 14);
 
     insertAtMiddle(head, tail, 6, 1000);
     printList(head);
