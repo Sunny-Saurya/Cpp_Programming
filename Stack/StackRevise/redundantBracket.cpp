@@ -17,7 +17,7 @@ bool redundantBrackets(string &s)
 
         else
         {
-            // ch is closing and lowercase .. which can be ignore
+            // ch is closing and lowercase .. which can be ignore 
 
             if (ch == ')')
             {
