@@ -34,7 +34,7 @@ public:
             q.pop();
 
             ans.push_back(frontNode);
-
+            // for disconnected component in the same graph
             for (auto i : adj[frontNode]) {
                 if (!visited[i]) {
                     q.push(i);
