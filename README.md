@@ -1,4 +1,4 @@
-C++ DSA Practice Repository
+# C++ DSA Practice Repository
 
 Welcome to my C++ Data Structures and Algorithms (DSA) repository! This is where I track my progress, upload solutions to coding problems, and document the concepts I am learning while preparing for competitive programming and technical interviews.
 
