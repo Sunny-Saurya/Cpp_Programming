@@ -4,7 +4,8 @@ using namespace std;
 class Graph
 {
 public:
-    unordered_map<int, list<int>> adj;
+
+    unordered_map<int, list<int>>  adj;
     unordered_map<int, bool> visited;
     vector<int> ans;
 
@@ -22,6 +23,7 @@ public:
         for (auto i : adj)
         {
             cout << i.first << " -> ";
+            
             for (auto j : i.second)
             {
                 cout << j << " ";
