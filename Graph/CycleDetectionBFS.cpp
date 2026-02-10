@@ -9,7 +9,8 @@ public:
 
     void addEdge(int u, int v, int direction)
     {
-        // direction - 0 -> undirected, 1 -> directed
+        // direction - 0 -> undirected, 1 -> directe d
+
         adj[u].push_back(v);
         if (direction == 0)
         {
